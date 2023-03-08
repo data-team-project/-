@@ -1,0 +1,107 @@
+
+body {
+    margin: 0;
+}
+#finalPrice{
+    font-size: larger;
+    font-weight: bold;
+    color: tomato;
+    display: inline;
+}
+#result {
+    font-size: larger;
+    font-weight: bold;
+    color: deepskyblue;
+}
+.header {
+    background-image: url('https://images.unsplash.com/photo-1478827536114-da961b7f86d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+input[type="button"] {
+    /* add a lower z-index to the input tag to make it appear in front of the h1 tag */
+    z-index: 1;
+    font-size: 100%;
+}
+.main_grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 10px;
+}
+/* .top_grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+} */
+@media only screen and (max-width: 600px) {
+    .header {
+        font-size: 2em;
+        padding: 10px;
+    }
+}
+.product_image {
+    margin-top: 30px;
+}
+h1 a {
+    color: aliceblue;
+    font-size: 200%;
+}
+.detailed_product_description {
+    margin-left: 20px;
+    font: 0.75em Nanum Gothic,"나눔고딕",'Noto Sans KR',Dotum,AppleGothic,Verdana,'FontAwesome',sans-serif ;
+}
+.detailed_product_description_under1 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    font-size: 150%;
+    border-bottom: 1px solid black;
+}
+.detailed_product_description_under2 {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-size: 150%;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+.detailed_product_description_under1_select {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.SNS_image {
+    width: 15px;
+    height: 15px;
+    padding-left: 5px;
+    padding-right: 5px;     
+}
+.price {
+    color: dodgerblue;
+}
+.minor_text{
+    color: grey;
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.review_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: cornflowerblue;
+}
+h2 {
+    font-size: 300%;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
