@@ -1,0 +1,376 @@
+* {
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+
+/* 헤더 영역 */
+header {
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+                url('image/camping.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+/* 네비게이션바 */
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 999;
+}
+.logo {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+.menu a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid cornflowerblue;
+    transition: 0.4s linear;
+}
+.menu a:hover:before {
+    width: 90%;
+}
+
+/* 로그인영역 */
+.register a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    background: cornflowerblue;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+.register a:hover {
+    background: transparent;
+    border: 1px solid cornflowerblue;
+}
+.h-txt {
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white
+
+}
+.h-txt span {
+    letter-spacing: 5px;
+}
+.h-txt h1 {
+    font-size: 3.5em;
+}
+.h-txt a {
+    text-decoration: none;
+    background: cornflowerblue;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+}
+.h-txt a:hover {
+    background: transparent;
+    border: 1px solid cornflowerblue;
+}
+
+/* 하단 영역 */
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.footer a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+}
+.footer h3 {
+    padding-bottom: 5px;
+}
+.footer p {
+    padding-bottom: 3%;
+}
+
+/* 슬라이더 영역 */
+.slideshow-container * {
+    box-sizing: border-box;
+}
+.slideshow-container body {
+    font-family: Verdana, sans-serif;
+}
+.slideshow-container img {
+    vertical-align: middle;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+.active {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+     animation-duration: 1.5s;
+}
+
+/* fade */
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* 모바일스크린 너비 400px, 높이 840px */
+@media only screen and (max-width: 685px) {
+    /* media 슬라이더영역 */
+    .text {
+        font-size: 11px
+    }
+
+    /* media 네비게이션바 영역 */
+    .menu {
+        display: none;
+    }
+    .menu a {
+        font-size: 20px;
+        padding: 5px;
+    }
+    nav {
+        display: inline block;
+        text-align: center;
+        height: 100px;
+    }
+
+    /* media 로그인 영역 */
+    .modalcontainer a {
+        font-size: 13px;
+    }
+    .register {
+        position: static;
+    }
+
+    /* 오버레이 */
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+
+    /* 문의사항영역 */
+    .contact {
+        display: block;
+    }
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+  
+      
+      .contact_box1{
+          width : 100%;
+          padding-top:20px;
+      }
+  
+      .contact_box2 {
+          width : 100%;
+      }
+}
+
+/* 리뷰 영역 */
+.reviews {
+    text-align: center;
+    padding: 5%;
+}
+.reviews h3 {
+    padding-bottom: 5%;
+}
+
+/* 메인 영역 */
+.main {
+    padding: 5%;
+    text-align: center;
+}
+.main h3 {
+    padding-bottom: 5%;
+}
+
+/* 오버레이 */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* 문의사항 스타일 */
+#Contact {
+    width: 100%;
+    margin-right:0;
+    text-align: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    display: flex;    
+    flex-wrap: wrap;
+}
+  
+.contact_box1 {
+    flex: 1;
+    font-size: 20px;
+    width : 50%;
+}
+
+.contact_box2 input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: cornflowerblue;
+  }
+  
+  .contact_box2 {
+    width : 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 28%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 72%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* placeholder 폰트 적용 */
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-family: sans-serif;
+    font-size: 13px;
+  }

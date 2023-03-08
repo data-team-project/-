@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <!-- 네비게이션 바 -->
+        <nav>
+            <!-- 로고 -->
+            <div calss="logo">
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="#">메뉴1</a>
+                        <a href="#">메뉴1</a>
+                        <a href="#">메뉴3</a>
+                        <a href="#">메뉴4</a>
+                    </div>
+                </div>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </div>
+            <!-- 메뉴 -->
+            <div class="menu">
+                <a href="#">메뉴1</a>
+                <a href="#BBB">메뉴2</a>
+                <a href="#CCC">메뉴3</a>
+                <a href="#DDD">메뉴4</a>
+            </div>
+
+            <!-- 로그인 -->
+            <div class="register">
+                <a type="button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">로그인</a>
+
+                <div id="id01" class="modal">
+              
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close modal">&times;</span>
+                            <img src="image/login.jpg" alt="Avatar" class="avatar">
+                        </div>
+            
+                    <div class="modalcontainer">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                        <button type="submit">로그인</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> 이 계정 기억하기
+                        </label>
+                    </div>
+            
+                        <div class="modalcontainer" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">닫기</button>
+                            <span class="psw"><a href="javascript:alert('바보');">비밀번호를 잃어버리셨나요?</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 헤더 내용 -->
+        <section class="h-txt">
+            <span>Enjoy</span>
+            <h1>International Travel Agency</h1>
+            <br>
+            <!-- 액션유도버튼 -->
+            <a href="#" target="_blank">자세히 알아보기</a>
+        </section>
+    </header>
+
+    <!-- 메인 영역 -->
+    <div class="main">
+        <section>
+            <h3>Main contents</h3>
+            <p>
+                A tent (/tɛnt/ (listen)) is a shelter consisting of sheets of fabric or other material draped over, attached to a frame of poles or a supporting rope. While smaller tents may be free-standing or attached to the ground, large tents are usually anchored using guy ropes tied to stakes or tent pegs. First used as portable homes by nomads, tents are now more often used for recreational camping and as temporary shelters.
+                Tents range in size from "bivouac" structures, just big enough for one person to sleep in, up to huge circus tents capable of seating thousands of people. Tents for recreational camping fall into two categories. Tents intended to be carried by backpackers are the smallest and lightest type. Small tents may be sufficiently light that they can be carried for long distances on a touring bicycle, a boat, or when backpacking. The second type are larger, heavier tents which are usually carried in a car or other vehicle. Depending on tent size and the experience of the person or people involved, such tents can usually be assembled (pitched) in between 5 and 25 minutes; disassembly (striking) takes a similar length of time. Some very specialised tents have spring-loaded poles and can be pitched in seconds, but take somewhat longer to strike (take down and pack).
+                Over the past decade, tents have also been increasingly linked with homelessness crises in the United States, Canada, and other regions. Places of multiple homeless people living in tents closely pitched or plotted near each other are often referred to as tent cities.
+            </p>
+        </section>
+    </div>
+
+    <!-- 슬라이더 영역 -->
+    <div class="slideshow-container" id="BBB">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="image/img_nature_wide.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="image/img_snow_wide.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="image/img_mountains_wide.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+    </div>
+    <br>
+    <!-- 슬라이더 점세개 -->
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+    
+    <!-- 리뷰 영역 -->
+    <div class="reviews" id="CCC">
+        <section>
+            <h3>Best Reviews</h3>
+            <p>
+                A tent (/tɛnt/ (listen)) is a shelter consisting of sheets of fabric or other material draped over, attached to a frame of poles or a supporting rope. While smaller tents may be free-standing or attached to the ground, large tents are usually anchored using guy ropes tied to stakes or tent pegs. First used as portable homes by nomads, tents are now more often used for recreational camping and as temporary shelters.
+                Tents range in size from "bivouac" structures, just big enough for one person to sleep in, up to huge circus tents capable of seating thousands of people. Tents for recreational camping fall into two categories. Tents intended to be carried by backpackers are the smallest and lightest type. Small tents may be sufficiently light that they can be carried for long distances on a touring bicycle, a boat, or when backpacking. The second type are larger, heavier tents which are usually carried in a car or other vehicle. Depending on tent size and the experience of the person or people involved, such tents can usually be assembled (pitched) in between 5 and 25 minutes; disassembly (striking) takes a similar length of time. Some very specialised tents have spring-loaded poles and can be pitched in seconds, but take somewhat longer to strike (take down and pack).
+                Over the past decade, tents have also been increasingly linked with homelessness crises in the United States, Canada, and other regions. Places of multiple homeless people living in tents closely pitched or plotted near each other are often referred to as tent cities.
+            </p>
+        </section>
+    </div>
+
+    <!-- 문의 사항 -->
+    <div id = "Contact"> 
+        <div class = "contact_box1"> 
+            집 나가면 개고생?<br>
+            우리 텐트와 함께라면 NO!
+        </div>
+        <div class = "contact_box2">
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                      <label for="name">이름</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="name" name="name" placeholder="이름을 입력하세요.">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="e-mail">e-mail</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="e-mail" name="e-mail" placeholder="메일 주소를 입력하세요.">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="subject">문의사항</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea id="subject" name="subject" placeholder="문의사항을 입력하세요." style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <input type="submit" value="제출">
+                  </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 하단영역 -->
+    <footer>
+        <section class="footer">
+            <!-- 인스타그램 -->
+            <a href = "https://www.instagram.com/explore/tags/캠핑" target="_blank"><i class="ri-instagram-fill"></i></a>
+            <!-- 페이스북 -->
+            <a href = "https://www.facebook.com/" target="_blank"><i class="ri-facebook-box-fill"></i></a>
+            <!-- 유튜브 -->
+            <a href = "https://www.youtube.com/results?search_query=%EC%BA%A0%ED%95%91" target="_blank"><i class="ri-youtube-fill"></i></a>
+            <!-- 저작권표시 -->
+            <h3><i class="ri-copyright-line"></i> 2023 copyright reserved.</h3>
+        </section>
+    </footer>
+
+    <!-- 스크립트 -->
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</body>
+</html>
