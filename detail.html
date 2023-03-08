@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LK2GHGN8WB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LK2GHGN8WB');
+    </script>
+    <!-- Day Night Mode Button-->
+    <script>
+        function LinksSetColor(color) {
+            var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length) {
+                    alist[i].style.color = color;
+                    i += 1;
+                }
+        }
+        function BodySetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
+        function BodySetBackgroundColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+
+            if(self.value === 'Night Mode') {
+                BodySetBackgroundColor('black');
+                BodySetColor('white');
+                self.value = 'Day Mode';
+                LinksSetColor('powderblue');
+            } else {
+                BodySetBackgroundColor('white');
+                BodySetColor('black');
+                self.value = 'Night Mode';
+                LinksSetColor('yellow');
+            }
+        }
+    </script>
+    <!--jQuery CDN(Content Delivery Network)-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--document.querySelector : self content-->
+    <script>
+        function selfContent(className){
+            const myHeading = document.querySelector("."+className);
+            const myText = myHeading.textContent;
+            return myText
+        }
+    </script>
+    <!--style-->
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티캠퍼스 텐트</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1 class="header"><a href="index.html">MultiCampus Tent</a></h1>
+    <div class="top_grid">
+        <div class="main_grid">
+            <div class="product_image">
+                <img src="https://images.unsplash.com/photo-1628087235616-4e146afcd061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"/>
+            </div>
+            <div class="detailed_product_description">
+                <!--nightDayHandler Button-->
+                <!-- <input type="button" title="Night Mode" onclick="nightDayHandler(this)" /><br/> -->
+                <h2 id="productName">2인용 텐트 세트 A [10% 할인 중]</h2>
+                <!--상품명, 2박3일 대여요금, SNS 상품홍보-->
+                <div class="detailed_product_description_under1">
+                    <div>
+                        <p>상품명</p>
+                        <p class="price">2박3일 대여요금</p>
+                        <p>SNS 상품홍보</p>
+                    </div>
+                    <div>
+                        <p>2인용 캠핑 패키지 [10% 할인 중]</p>
+                        <p class="price">57,000원</p>
+                        <a href="https://www.facebook.com" target="_blank"><image class="SNS_image" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" ></image></a>
+                        <a href="https://www.twitter.com" target="_blank"><image class="SNS_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n_urpJ9XpwOTdzBVbGvactwHrPagYQrTJPYjxfxLGkSyu7nJZVqRVGAeohnPgKMrnKE&usqp=CAU" ></image></a>
+                        <a href="https://www.instargram.com" target="_blank"><image class="SNS_image" src="http://store-images.s-microsoft.com/image/apps.31997.13510798887167234.6cd52261-a276-49cf-9b6b-9ef8491fb799.30e70ce4-33c5-43d6-9af1-491fe4679377" ></image></a>
+                    </div>
+                </div>
+                <!--기본포함장비-->
+                <div class="detailed_product_description_under1">
+                    <div>
+                        <p>기본포함장비확인</p>
+                    </div>
+                    <div class="detailed_product_description_under1_select">
+                        <select id="mySelect1">
+                            <option value="option1">- [필수] 기본포함장비확인 선택</option>
+                            <option value="option2" disabled>-------------------------</option>
+                            <option value="option3">비박텐트, 미니타프, 경량릴렉스체어 2개, 경량테이블, 자충매트 2개, 2인용 코펠, 버너</option>
+                        </select>
+                        <!--옵션 선택시 팝업기능-->
+                        <!-- <div class="choosenOption"></div>
+                        <script>
+                            const selectOptions = document.getElementById('mySelect1');
+                            const choosenOption = document.querySelector('.choosenOption');
+                            selectOptions.addEventListener('change', (event) => {
+                            choosenOption.innerText = event.target.value;
+                            });
+                        </script> -->
+
+                    </div>
+                </div>
+                <!--대여기간-->
+                <div class="detailed_product_description_under1">
+                    <div><p>대여기간</p></div>
+                    <!--대여기간 select-->
+                    <div class="detailed_product_description_under1_select">
+                        <select id="select" onchange="
+                            const selectedValue = myOption();
+                            if(selectedValue == 'option3'){
+                                console.log('정상작동 했습니다. option3')
+                                priceLoad(selectedValue);
+                            }
+                            else if(selectedValue == 'option4'){
+                                console.log('정상작동 했습니다. option4');
+                                priceLoad(selectedValue);
+                            }
+                            else if(selectedValue == 'option5'){
+                                console.log('정상작동 했습니다. option5');
+                                priceLoad(selectedValue);
+                            }
+                            else if(selectedValue == 'option6'){
+                                console.log('정상작동 했습니다. option6');
+                                priceLoad(selectedValue);
+                            }
+                        ">
+                            <option value="option1">- [필수] 대여기간 선택</option>
+                            <option value="option2" disabled>-------------------------</option>
+                            <option value="option3">2박3일</option>
+                            <option value="option4">3박4일(+25,000원)</option>
+                            <option value="option5">4박5일(+50,000원)</option>
+                            <option value="option6">5박6일(+75,000원)</option>
+                        </select>
+                    </div>
+                </div>
+                <!--사용시작일-->
+                <div class="detailed_product_description_under1">
+                    <div>
+                        <p>사용 시작일</p>
+                    </div>
+                    <div class="detailed_product_description_under1_select">
+                        <input type="date"/>
+                    </div>
+                </div>
+                <!--최소 주문 수량-->
+                <div class="minor_text">
+                    <scan>(최소 주문 수량은 1개입니다)</scan>
+                </div>
+                <!--선택 상품, 선택 옵션 가격-->
+                <div class="detailed_product_description_under2">
+                    <div>
+                        <h3>현재 선택 상품 :</h3>
+                        <!--현재 선택 상품-->
+                        <div  class="choosenProduct">
+                            <script>
+                                const productName = document.getElementById("productName").textContent;
+                                const description = document.querySelector(".choosenProduct");
+                                description.innerHTML = productName;
+                            </script>
+                        </div>
+                        <h3>▼현재 선택 옵션 가격▼</h3>
+                        <!--선택 옵션에 따른 가격-->
+                        <div id="result">
+                            0원
+                        </div>
+                    </div>
+                </div>
+                <!--최종 가격-->
+                <div class="detailed_product_description_under2">
+                    <div id="finalPrice">
+                        <h3>▼최종 가격▼</h3>
+                        <div id="result2">
+                           0원
+                        </div>
+                    </div>
+                </div>
+                <!--제품 리뷰 댓글, 라이브 채팅-->
+                <div>
+                    <h2 class="review_title">제품 리뷰</h2>
+                    <!--comment fnc-->
+                    <p>
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                            /*
+                            var disqus_config = function () {
+                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            };
+                            */
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://been-world.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    </p>
+                    <!--Live chatting fnc-->
+                    <p>
+                        <!--Start of Tawk.to Script-->
+                        <script type="text/javascript">
+                            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                            (function(){
+                            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                            s1.async=true;
+                            s1.src='https://embed.tawk.to/63fc114f4247f20fefe2cc3b/1gq8a77tp';
+                            s1.charset='UTF-8';
+                            s1.setAttribute('crossorigin','*');
+                            s0.parentNode.insertBefore(s1,s0);
+                            })();
+                            </script>
+                            <!--End of Tawk.to Script-->
+                    </p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!--함수 정의-->
+    <!--myOption()-->
+    <script>
+        function myOption(){
+            var selectedOption = document.getElementById("select")
+            selectedOption = selectedOption.options[selectedOption.selectedIndex].value;
+            return selectedOption;
+        }
+    </script>
+    <!--priceLoad 함수-->
+    <script>
+        function priceLoad(name) {
+            fetch(name).then(function(response) {
+                response.text().then(function(text) {
+                    document.querySelector("#result").innerHTML = text;
+                });
+            });
+        }
+    </script>
+    <!--priceLoad2 함수 (#result2)-->
+    <script>
+        function priceLoad2(name) {
+            fetch(name).then(function(response) {
+                response.text().then(function(text) {
+                    document.querySelector("#result2").innerHTML = text;
+                });
+            });
+        }
+    </script>
+    <!--id=result 값 변화 감지 함수-->
+    <script>
+        // Get a reference to the result div
+        var resultDiv = document.getElementById("result");
+    
+        // Create a MutationObserver to detect changes to the div contents
+        var observer = new MutationObserver(function() {
+            // Call the priceLoad2 function when the contents of the div change
+            const selectedValue = myOption();
+            priceLoad2(selectedValue);
+        });
+    
+        // Start observing the div for changes
+        observer.observe(resultDiv, { childList: true });
+    </script>
+</body>
+</html>
