@@ -212,6 +212,7 @@ nav {
     color: #818181;
     display: block;
     transition: 0.3s;
+    line-height: 100px;
 }
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
@@ -336,7 +337,10 @@ input[type=submit]:hover {
     }
 
     /* 오버레이 */
-    .overlay a {font-size: 20px}
+    .overlay a {
+        font-size: 30px;
+        line-height: 70px;
+    }
     .overlay .closebtn {
     font-size: 40px;
     top: 15px;
