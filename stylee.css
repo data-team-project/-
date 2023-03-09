@@ -331,9 +331,6 @@ input[type=submit]:hover {
     }
 
     /* 로그인 영역 */
-    .modalcontainer a {
-        font-size: 13px;
-    }
     .register {
         position: static;
     }
