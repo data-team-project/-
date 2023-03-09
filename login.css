@@ -118,9 +118,11 @@ span.psw {
   }
   .cancelbtn {
     width: 70px;
+    display: none;
   }
   .modalcontainer a {
     font-size: 13px;
+    display: block;
   }
   .modal-content {
     width: 90%;
