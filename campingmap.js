@@ -10,7 +10,7 @@ function initMap() {
 }
 
 async function getData(map) {
-  const url = `http://apis.data.go.kr/B551011/GoCamping/basedList?MobileOS=ETC&MobileApp=TEST&serviceKey=${API_KEY}&_type=json`;
+  const url = `http://apis.data.go.kr/B551011/GoCamping/locationBasedList?MobileOS=ETC&MobileApp=TEST&serviceKey=${API_KEY}&_type=json&mapX=128.6142847&mapY=36.0345423&radius=2000`;
 
   const response = await fetch(url);
   const data = await response.json();
