@@ -2,7 +2,7 @@ const API_KEY = 'bsau4CZ2%2FCrD0c%2F%2BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQ
 
 async function getData() {
     const url = `http://apis.data.go.kr/B551011/GoCamping/searchList?numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=TEST&ServiceKey=${API_KEY}&keyword=%EC%95%BC%EC%98%81%EC%9E%A5`;
-  
+
     const response = await fetch(url);
     const text = await response.text();
   
