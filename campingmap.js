@@ -25,7 +25,15 @@ async function getData(map) {
 
     const marker = new naver.maps.Marker({
       position: new naver.maps.LatLng(lat, lng),
-      map: map
+      map: map,
+      icon: {
+        content: [
+          '<div class="marker">',
+          '<div class="marker-icon"></div>',
+          '</div>'
+        ].join(''),
+        anchor: new naver.maps.Point(11, 35)
+      }
     });
 
     // 마커 클릭 시 정보 창 열기
