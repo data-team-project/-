@@ -17,8 +17,8 @@ async function getData(map) {
 
   // 마커 생성 및 지도에 추가
   data.response.body.items.item.forEach(item => {
-    const lat = item.latitude;
-    const lng = item.longitude;
+    const lat = item.mapY;
+    const lng = item.mapX;
 
     const marker = new naver.maps.Marker({
       position: new naver.maps.LatLng(lat, lng),
