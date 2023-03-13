@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--==============================================================-->
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LK2GHGN8WB"></script>
@@ -52,6 +53,10 @@
             return myText
         }
     </script>
+    <!--font awesome library-->
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
     <!--style-->
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
@@ -60,13 +65,37 @@
     <title>멀티캠퍼스 텐트</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-
+<!--==============================================================-->
 <body>
     <h1 class="header"><a href="index.html">MultiCampus Tent</a></h1>
+    <!-- This is a navbar section -->
+    <div class="navbar">
+        <!-- This is a dropdown menu -->
+        <div class="dropdown">
+            <!-- This is a button to open the dropdown menu -->
+            <button class="dropbtn" onclick="myFunction()">캠핑 패키지
+                <!-- This is a caret icon to indicate the dropdown menu -->
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <!-- This is the content of the dropdown menu -->
+            <div class="dropdown-content" id="myDropdown">
+                <!-- These are the links inside the dropdown menu -->
+                <a href="#">2인용 캠핑 패키지</a>
+                <a href="#">3인용 캠핑 패키지</a>
+                <a href="#">4인용 캠핑 패키지</a>
+            </div>
+        </div> 
+        <!-- These are the links in the navbar -->
+        <a href="#home">텐트</a>
+        <a href="#home">타프</a>
+        <a href="#home">원터치텐트</a>
+        <a href="#home">매트/침낭</a>
+        <a href="#home">코펠/버너/BBQ</a>
+    </div>
     <div class="top_grid">
         <div class="main_grid">
             <div class="product_image">
-                <img src="https://images.unsplash.com/photo-1628087235616-4e146afcd061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"/>
+                <img class="product_image_content" src="https://images.unsplash.com/photo-1628087235616-4e146afcd061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"/>
             </div>
             <div class="detailed_product_description">
                 <!--nightDayHandler Button-->
@@ -184,52 +213,77 @@
                         </div>
                     </div>
                 </div>
-                <!--제품 리뷰 댓글, 라이브 채팅-->
-                <div>
-                    <h2 class="review_title">제품 리뷰</h2>
-                    <!--comment fnc-->
-                    <p>
-                        <div id="disqus_thread"></div>
-                        <script>
-                            /**
-                            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                            /*
-                            var disqus_config = function () {
-                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                            };
-                            */
-                            (function() { // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://been-world.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                            })();
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    </p>
-                    <!--Live chatting fnc-->
-                    <p>
-                        <!--Start of Tawk.to Script-->
-                        <script type="text/javascript">
-                            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-                            (function(){
-                            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                            s1.async=true;
-                            s1.src='https://embed.tawk.to/63fc114f4247f20fefe2cc3b/1gq8a77tp';
-                            s1.charset='UTF-8';
-                            s1.setAttribute('crossorigin','*');
-                            s0.parentNode.insertBefore(s1,s0);
-                            })();
-                            </script>
-                            <!--End of Tawk.to Script-->
-                    </p>
-                </div> 
+                
             </div>
         </div>
     </div>
+    <!-- This is a contents tab section -->
+    <div class="contentstab">
+        <a href="#" class="contentstab-content">제품 상세설명</a>
+        <a href="#" class="contentstab-content">제품 리뷰</a>
+        <a href="#" class="contentstab-content">주의사항</a>
+    </div>
+    <!--제품 리뷰 댓글, 라이브 채팅-->
+    <div>
+        <h2 class="review_title">제품 리뷰</h2>
+        <!--comment fnc-->
+        <p>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://been-world.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </p>
+        <!--Live chatting fnc-->
+        <p>
+            <!--Start of Tawk.to Script-->
+            <script type="text/javascript">
+                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/63fc114f4247f20fefe2cc3b/1gq8a77tp';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+                })();
+                </script>
+                <!--End of Tawk.to Script-->
+        </p>
+    </div> 
     <!--함수 정의-->
+    <!--click dropdown 기능-->
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+    </script>
     <!--myOption()-->
     <script>
         function myOption(){
@@ -274,4 +328,5 @@
         observer.observe(resultDiv, { childList: true });
     </script>
 </body>
+<!--==============================================================-->
 </html>
