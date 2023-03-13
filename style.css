@@ -1,7 +1,43 @@
 body {
     margin: 0;
 }
-/* ================This is Slideshow =====================*/
+/* =============================Start of Sticky Navbar=============================*/
+  /* Style the navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+    z-index: 999;
+  }
+
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+/* =============================End of Sticky Navbar=============================*/
+
+/* ================This is image gallery Slideshow =====================*/
 * {
   box-sizing: border-box;
 }
@@ -92,6 +128,7 @@ body {
 .demo:hover {
   opacity: 1;
 }
+
 /*=================== End of  Slideshow ===================*/
 /* ========================= start of sticky social bar ======================== */
 /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
@@ -198,11 +235,6 @@ body {
   border: 2px solid black;
 }
 /* ========================= End of attention ======================== */
-/* ========================= Start of discription_image ======================== */
-#discription_image {
-  
-}
-/* ========================= End of discription_image ======================== */
 /* ========================= Start of footer ======================== */
 .footer_container {
   background-color: rgba(247,247,247,255);

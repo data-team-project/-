@@ -69,7 +69,7 @@
 <body>
     <header><img class="header_image" src="https://camp-road.co.kr/web/upload/dor_main_img/top_banner_01.jpg" onclick="location.href='index.html'"/></header>
     <!-- This is a navbar section -->
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <!-- This is a dropdown menu -->
         <div class="dropdown">
             <!-- This is a button to open the dropdown menu -->
@@ -365,6 +365,7 @@
             <p class="footer_delivery">Delivery 배송</p>
             <p>CJ 대한통운 고객센터 : 1588-1255</p>
             <button><a href="https://www.cjlogistics.com/ko/tool/parcel/tracking">대한통운배송조회</a></button>
+        </div>
     </div>
     <!--Live chatting fnc-->
     <p>
@@ -492,6 +493,26 @@
     
         // Start observing the div for changes
         observer.observe(resultDiv, { childList: true });
+    </script>
+    <!-- Sticky Navbar 함수 -->
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
     </script>
 </body>
 <!--==============================================================-->
