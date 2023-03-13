@@ -15,6 +15,8 @@ async function getData(map) {
   const response = await fetch(url);
   const data = await response.json();
 
+  console.log(data); // 데이터 출력
+
   // 마커 생성 및 지도에 추가
   data.response.body.items.item.forEach(item => {
     const lat = item.mapY;
