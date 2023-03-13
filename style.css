@@ -203,6 +203,62 @@ body {
   
 }
 /* ========================= End of discription_image ======================== */
+/* ========================= Start of footer ======================== */
+.footer_container {
+  background-color: rgba(247,247,247,255);
+  margin: 3%;
+  padding: 3%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.footer_content_title {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.footer_content ul {
+  margin-left: 30px;
+  padding-left: 0px;
+  list-style-type: " ―   ";
+}
+.footer_content li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.footer_content {
+  border-right: 1px solid silver;
+  padding-left: 2%;
+  padding-right: 3%;
+  margin-left: 2%;
+}
+.footer_content p a {
+  text-decoration: none;
+}
+.footer_content p {
+  font-size:14px;
+  margin-bottom: 5px;
+}
+#footer_number {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20pt;
+}
+.bankingAddress {
+  text-align: center;
+}
+.footer_delivery {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+}
+.footer_content button a {
+  text-decoration: none;
+}
+/* ========================= End of footer ======================== */
 /* ========================= ======================== */
 /* ========================= ======================== */
 .decision_butn_mom {
