@@ -1,6 +1,15 @@
 const API_KEY = 'bsau4CZ2%2FCrD0c%2F%2BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQDlmuutpWnVjQvGR%2BBU%2BEd5pbrERoA%3D%3D';
 
-async function getData() {
+function initMap() {
+  const map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+  });
+
+  getData(map);
+}
+
+async function getData(map) {
   const url = `http://apis.data.go.kr/B551011/GoCamping/basedList?MobileOS=ETC&MobileApp=TEST&serviceKey=${API_KEY}&_type=json`;
 
   const response = await fetch(url);
@@ -26,14 +35,5 @@ async function getData() {
     });
   });
 
-  // 지도 중심 및 줌 레벨 조정
-  const item = data.response.body.items.item[0];
-  const lat = item.latitude;
-  const lng = item.longitude;
-  map.setCenter(new naver.maps.LatLng(lat, lng));
-  map.setZoom(10);
-
   console.log(data.response.body.items.item);
 }
-
-getData();
