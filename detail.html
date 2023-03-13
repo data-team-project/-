@@ -53,7 +53,7 @@
             return myText
         }
     </script>
-    <!--font awesome library-->
+    <!--Load font awesome icons-->
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -92,10 +92,80 @@
         <a href="#home">매트/침낭</a>
         <a href="#home">코펠/버너/BBQ</a>
     </div>
+    <!-- The social media icon bar -->
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
     <div class="top_grid">
         <div class="main_grid">
-            <div class="product_image">
-                <img class="product_image_content" src="https://images.unsplash.com/photo-1628087235616-4e146afcd061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80"/>
+            <!-- This is Slideshow Gallery -->
+            <!-- Container for the image gallery -->
+            <div class="container">
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                    <img src="https://images.unsplash.com/photo-1624923686627-514dd5e57bae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                    <img src="https://images.unsplash.com/photo-1571687949921-1306bfb24b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                    <img src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                    <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                    <img src="https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                    <img src="https://images.unsplash.com/photo-1624254495476-db6cc8b77e98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <!-- Image text -->
+                <div class="caption-container">
+                <p id="caption"></p>
+                </div>
+            
+                <!-- Thumbnail images -->
+                <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="https://images.unsplash.com/photo-1624923686627-514dd5e57bae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://images.unsplash.com/photo-1571687949921-1306bfb24b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://images.unsplash.com/photo-1624254495476-db6cc8b77e98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                </div>
+                </div>
             </div>
             <div class="detailed_product_description">
                 <!--nightDayHandler Button-->
@@ -106,14 +176,10 @@
                     <div>
                         <p>상품명</p>
                         <p class="price">2박3일 대여요금</p>
-                        <p>SNS 상품홍보</p>
                     </div>
                     <div>
                         <p>2인용 캠핑 패키지 [10% 할인 중]</p>
                         <p class="price">57,000원</p>
-                        <a href="https://www.facebook.com" target="_blank"><image class="SNS_image" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" ></image></a>
-                        <a href="https://www.twitter.com" target="_blank"><image class="SNS_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n_urpJ9XpwOTdzBVbGvactwHrPagYQrTJPYjxfxLGkSyu7nJZVqRVGAeohnPgKMrnKE&usqp=CAU" ></image></a>
-                        <a href="https://www.instargram.com" target="_blank"><image class="SNS_image" src="http://store-images.s-microsoft.com/image/apps.31997.13510798887167234.6cd52261-a276-49cf-9b6b-9ef8491fb799.30e70ce4-33c5-43d6-9af1-491fe4679377" ></image></a>
                     </div>
                 </div>
                 <!--기본포함장비-->
@@ -213,32 +279,37 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- 구매하기, 장바구니담기 버튼 -->
+                <div class="decision_butn_mom">
+                    <button class="button"><span>바로 구매하기</span></button>
+                    <button class="button"><span>장바구니 담기</span></button>
+                </div>
             </div>
         </div>
     </div>
+    
     <!-- This is a contents tab section -->
     <div class="contentstab">
-        <a href="#" class="contentstab-content">제품 상세설명</a>
-        <a href="#" class="contentstab-content">제품 리뷰</a>
-        <a href="#" class="contentstab-content">주의사항</a>
+        <span class="contentstab-content" onclick="ajax('product_discription_1', 'result3')">제품 상세설명</span>
+        <span class="contentstab-content" onclick="scrollToBottom()">제품 리뷰</span>
+        <span class="contentstab-content" onclick="ajax('attention', 'result3')">주의사항</span>
+        <!-- 제품 상세설명, 제품 리뷰, 주의사항 -->
     </div>
-    <!--제품 리뷰 댓글, 라이브 채팅-->
-    <div>
-        <h2 class="review_title">제품 리뷰</h2>
-        <!--comment fnc-->
+    <div class="contentstab_under_content">
+        <div id="result3">
+            <img id="discription_image" src="https://camp-road.co.kr/web/upload/NNEditor/20210326/copy-1616740172-1.jpg"/>
+        </div>
+    </div> 
+    <!-- 제품 리뷰 html -->
+    <div class="comments">
+        <p id="comments_title">제품 리뷰를 남겨주세요! 매주 추첨을 통해 텐트 이용권을 드려요!</p>
         <p>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
                 var disqus_config = function () {
                 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
-                */
                 (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
                 s.src = 'https://been-world.disqus.com/embed.js';
@@ -248,24 +319,74 @@
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </p>
-        <!--Live chatting fnc-->
-        <p>
-            <!--Start of Tawk.to Script-->
-            <script type="text/javascript">
-                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-                (function(){
-                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/63fc114f4247f20fefe2cc3b/1gq8a77tp';
-                s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
-                })();
-                </script>
-                <!--End of Tawk.to Script-->
-        </p>
-    </div> 
+    </div>
+    
+    <!--Live chatting fnc-->
+    <p>
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/63fc114f4247f20fefe2cc3b/1gq8a77tp';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+            <!--End of Tawk.to Script-->
+    </p>
     <!--함수 정의-->
+    <!-- This is Slideshow -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+    <!-- 아작스 기능 -->
+    <script>
+        function ajax(filename, select_id) {
+            fetch(filename).then(function(response) {
+                response.text().then(function(text) {
+                    document.querySelector("#" + select_id).innerHTML = text;
+                });
+            });
+        }
+    </script>
+    <!-- scroll to bottom -->
+    <script>
+        function scrollToBottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
     <!--click dropdown 기능-->
     <script>
         /* When the user clicks on the button, 
