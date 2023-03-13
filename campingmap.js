@@ -1,19 +1,39 @@
 const API_KEY = 'bsau4CZ2%2FCrD0c%2F%2BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQDlmuutpWnVjQvGR%2BBU%2BEd5pbrERoA%3D%3D';
 
-async function getData() {
-  const url = `http://apis.data.go.kr/B551011/GoCamping/basedList?MobileOS=ETC&MobileApp=TEST&serviceKey=${API_KEY}&_type=json`;
+function initMap() {
+  const map = new naver.maps.Map('map', {
+    center: new naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 10
+  });
+
+  getData(map);
+}
+
+async function getData(map) {
+  const url = `https://apis.data.go.kr/B551011/GoCamping/locationBasedList?MobileOS=etc&MobileApp=test&serviceKey=bsau4CZ2%252FCrD0c%252F%252BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQDlmuutpWnVjQvGR%252BBU%252BEd5pbrERoA%253D%253D&mapX=128.6142847&mapY=36.0345423&radius=2000`;
 
   const response = await fetch(url);
   const data = await response.json();
 
+  console.log(data); // 데이터 출력
+  console.log(data.response.body.items.item)
+
   // 마커 생성 및 지도에 추가
   data.response.body.items.item.forEach(item => {
-    const lat = item.latitude;
-    const lng = item.longitude;
+    const lat = item.mapY;
+    const lng = item.mapX;
 
     const marker = new naver.maps.Marker({
       position: new naver.maps.LatLng(lat, lng),
-      map: map
+      map: map,
+      icon: {
+        content: [
+          '<div class="marker">',
+          '<div class="marker-icon"></div>',
+          '</div>'
+        ].join(''),
+        anchor: new naver.maps.Point(11, 35)
+      }
     });
 
     // 마커 클릭 시 정보 창 열기
@@ -26,14 +46,5 @@ async function getData() {
     });
   });
 
-  // 지도 중심 및 줌 레벨 조정
-  const item = data.response.body.items.item[0];
-  const lat = item.latitude;
-  const lng = item.longitude;
-  map.setCenter(new naver.maps.LatLng(lat, lng));
-  map.setZoom(10);
-
   console.log(data.response.body.items.item);
 }
-
-getData();
