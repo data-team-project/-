@@ -9,11 +9,15 @@ body {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
+  max-width: 500px;
+  margin-top: 5%;
+  margin-left: 15%;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  
 }
 
 /* Add a pointer when hovering over the thumbnail images */
