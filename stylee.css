@@ -11,6 +11,35 @@ header {
     background-size: cover;
     font-family: sans-serif;
 }
+.h-txt {
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white
+
+}
+.h-txt span {
+    font-size: 1.3em;
+    letter-spacing: 5px;
+}
+.h-txt h1 {
+    font-size: 2.7em;
+}
+.h-txt a {
+    text-decoration: none;
+    background: cornflowerblue;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+}
+.h-txt a:hover {
+    background: transparent;
+    border: 1px solid cornflowerblue;
+}
 
 /* 네비게이션바 */
 nav {
@@ -64,34 +93,6 @@ nav {
     background: transparent;
     border: 1px solid cornflowerblue;
 }
-.h-txt {
-    max-width: 650px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white
-
-}
-.h-txt span {
-    letter-spacing: 5px;
-}
-.h-txt h1 {
-    font-size: 3.5em;
-}
-.h-txt a {
-    text-decoration: none;
-    background: cornflowerblue;
-    color: white;
-    padding: 10px 20px;
-    letter-spacing: 5px;
-    transition: 0.4s;
-}
-.h-txt a:hover {
-    background: transparent;
-    border: 1px solid cornflowerblue;
-}
 
 /* 하단 영역 */
 .footer {
@@ -139,9 +140,10 @@ nav {
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 1px;
     width: 100%;
     text-align: center;
+    background-color: rgba(0,0,0,0.4);
 }
 .numbertext {
     color: #f2f2f2;
@@ -149,6 +151,7 @@ nav {
     padding: 8px 12px;
     position: absolute;
     top: 0;
+    background-color: rgba(0,0,0,0.4);
 }
 .dot, .dot2 {
     height: 15px;
@@ -166,7 +169,7 @@ nav {
 }
 .fade {
     animation-name: fade;
-     animation-duration: 1.5s;
+    animation-duration: 1.5s;
 }
 
 /* 리뷰 영역 */
@@ -174,7 +177,7 @@ nav {
     max-width: 1000px;
     position: relative;
     margin: auto;
-  }
+}
 
   /* Next & previous buttons */
 .prev, .next {
@@ -191,20 +194,18 @@ nav {
     border-radius: 0 3px 3px 0;
     user-select: none;
     background-color:#818181;
-  }
+}
 
 /* Position the "next button" to the right */
- .next {
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
-    
-
 .reviews {
     text-align: center;
     padding: 5%;
@@ -212,8 +213,18 @@ nav {
 .reviews h3 {
     padding-bottom: 5%;
 }
-
-
+.reviews h4 {
+    padding-bottom: 5%;
+}
+.reviews p {
+    line-height: 30pt;
+}
+.reviews ul {
+    padding-bottom: 5%;
+}
+.reviews p, ul {
+    font-size: 12pt;
+}
 
 /* 메인 영역 */
 .main {
@@ -276,8 +287,10 @@ nav {
 }
 .contact_box1 {
     flex: 1;
-    font-size: 20px;
     width : 50%;
+}
+.contact_box1 h3 {
+    padding-bottom: 10%;
 }
 .contact_box2 input[type=text], select, textarea {
     width: 100%;
@@ -402,5 +415,22 @@ input[type=submit]:hover {
     }
     .contact_box2 {
         width : 100%;
+    }
+
+    /* 헤더영역 */
+    .h-txt span {
+        font-size: 14pt;
+    }
+    .h-txt h1 {
+        font-size: 20pt;
+    }
+    .h-txt a {
+        display: block;
+        min-width: max-content;
+    }
+
+    /* 리뷰영역 */
+    .reviews p, ul {
+        font-size: 10pt;
     }
 }
