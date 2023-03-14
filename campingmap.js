@@ -13,7 +13,7 @@ async function getData() {
 function drawMap(locations) {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
-    center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+    center: new google.maps.LatLng(37.5662952, 126.9779451),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
 
