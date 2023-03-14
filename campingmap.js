@@ -1,8 +1,8 @@
 async function getData() {
-  const url = `https://apis.data.go.kr/B551011/GoCamping/locationBasedList?MobileOS=etc&MobileApp=test&serviceKey=bsau4CZ2%2FCrD0c%2F%2BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQDlmuutpWnVjQvGR%2BBU%2BEd5pbrERoA%3D%3D&mapX=128.6142847&mapY=36.0345423&radius=2000&_type=json`;
+  const url = `https://apis.data.go.kr/B551011/GoCamping/locationBasedList?&MobileOS=etc&MobileApp=test&serviceKey=bsau4CZ2%2FCrD0c%2F%2BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQDlmuutpWnVjQvGR%2BBU%2BEd5pbrERoA%3D%3D&numOfRows=20&mapX=128.6142847&mapY=36.0345423&radius=20000&_type=json`;
   const response = await fetch(url);
   const data = await response.json();
-  const locations = data.response.body.items.item.map(spot=>[spot.facltNm,spot.mapX,spot.mapY]);
+  const locations = data.response.body.items.item.map(spot => [spot.facltNm, spot.mapX, spot.mapY, spot.intro]);
 
   console.log("data", data);
   console.log("locations", locations);
@@ -33,6 +33,7 @@ function drawMap(locations) {
       (function (marker, i) {
         return function () {
           infowindow.setContent(locations[i][0]);
+          infowindow.setContent(locations[i][3]);
           infowindow.open(map, marker);
         };
       })(marker, i)
@@ -40,4 +41,7 @@ function drawMap(locations) {
   }
 }
 
-getData();
+function initMap() {
+  // 지도 초기화 및 표시하는 로직 작성
+  getData();
+}
