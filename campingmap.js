@@ -17,4 +17,10 @@ async function getData() {
     let lng = parseFloat(item.mapX);
     addMarkerToMap(lat, lng);
   });
+  
+  // 일정 시간이 지난 후 다시 getData() 함수를 호출합니다.
+  setTimeout(getData, 5000); // 5초마다 호출
 }
+
+// 최초로 getData() 함수를 호출합니다.
+getData();
