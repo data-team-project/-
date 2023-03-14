@@ -4,29 +4,30 @@ async function getData() {
   const data = await response.json();
   const locations = data.response.body.items.item.map(spot=>[spot.facltNm,spot.mapX,spot.mapY]);
 
-  
   console.log("data", data);
-  console.log("locations", locations)
+  console.log("locations", locations);
+
+  drawMap(locations);
 }
 
 function drawMap(locations) {
-  const map = new naver.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 13,
-    center: new naver.maps.LatLng(locations[0][1], locations[0][2]),
-    mapTypeId: naver.maps.MapTypeId.ROADMAP,
+    center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
 
-  const infowindow = new naver.maps.InfoWindow();
+  const infowindow = new google.maps.InfoWindow();
 
   let marker, i;
 
   for (i = 0; i < locations.length; i++) {
-    marker = new naver.maps.Marker({
-      position: new naver.maps.LatLng(locations[i][1], locations[i][2]),
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
       map: map,
     });
 
-    naver.maps.event.addListener(
+    google.maps.event.addListener(
       marker,
       "click",
       (function (marker, i) {
@@ -37,10 +38,6 @@ function drawMap(locations) {
       })(marker, i)
     );
   }
-  
-  drawMap(locations);
 }
 
-  getData();
-
-
+getData();
