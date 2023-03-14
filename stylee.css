@@ -179,7 +179,17 @@ nav {
     margin: auto;
 }
 
-  /* Next & previous buttons */
+/* 서브 영역 */
+.sub {
+    background-color: #f2f2f2;
+    padding: 5%;
+    text-align: center;
+}
+.sub h3 {
+    padding-bottom: 5%;
+}
+
+/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -235,6 +245,14 @@ nav {
     padding-bottom: 5%;
 }
 
+/* 하단 이미지 */
+.underbar {
+    display: contents;
+}
+.underbar img {
+    display: block;
+}
+
 /* 오버레이 */
 .overlay {
     height: 100%;
@@ -277,7 +295,6 @@ nav {
 /* 문의사항 스타일 */
 #Contact {
     width: 100%;
-    margin-top : 20px;
     margin-right:0;
     text-align: center;
     align-items: center;
