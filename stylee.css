@@ -14,7 +14,6 @@ header {
     background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
                 url('image/camping.jpg');
     background-size: cover;
-    font-family: sans-serif;
 }
 .h-txt {
     max-width: 650px;
@@ -24,7 +23,6 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white
-
 }
 .h-txt span {
     font-family: 'Nanum Brush Script', cursive;
@@ -130,7 +128,7 @@ nav {
     box-sizing: border-box;
 }
 .slideshow-container body {
-    font-family: Verdana, sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .slideshow-container img {
     vertical-align: middle;
