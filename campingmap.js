@@ -1,32 +1,46 @@
-function addMarkerToMap(map, lat, lng) {
-  var marker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(lat, lng),
-    map: map
-  });
-}
-
-async function getData(map) {
+async function getData() {
   const url = `https://apis.data.go.kr/B551011/GoCamping/locationBasedList?MobileOS=etc&MobileApp=test&serviceKey=bsau4CZ2%2FCrD0c%2F%2BogGB12VyPtsUeBBOFUteULnfYcBpmDfH1O576AbDQDlmuutpWnVjQvGR%2BBU%2BEd5pbrERoA%3D%3D&mapX=128.6142847&mapY=36.0345423&radius=2000&_type=json`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log("data", data);
+  const locations = data.response.body.items.item.map(spot=>[spot.facltNm,spot.mapX,spot.mapY]);
 
-  // 받아온 데이터에서 좌표값 추출하여 지도에 마커 추가
-  if (data && data.locationBasedList) {
-    data.locationBasedList.forEach(function(item) {
-      let lat = parseFloat(item.mapY);
-      let lng = parseFloat(item.mapX);
-      addMarkerToMap(map, lat, lng);
-    });
-  } else {
-    console.log("No data or locationBasedList found.");
-  }
+  
+  console.log("data", data);
+  console.log("locations", locations)
 }
 
-// naver.maps.Map 객체 생성 후 getData 함수에 전달
-var map = new naver.maps.Map('map', {
-  center: new naver.maps.LatLng(37.3595704, 127.105399),
-  zoom: 10
-});
+function drawMap(locations) {
+  const map = new naver.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: new naver.maps.LatLng(locations[0][1], locations[0][2]),
+    mapTypeId: naver.maps.MapTypeId.ROADMAP,
+  });
 
-getData(map);
+  const infowindow = new naver.maps.InfoWindow();
+
+  let marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new naver.maps.Marker({
+      position: new naver.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map,
+    });
+
+    naver.maps.event.addListener(
+      marker,
+      "click",
+      (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        };
+      })(marker, i)
+    );
+  }
+  
+  drawMap(locations);
+}
+
+  getData();
+
+
