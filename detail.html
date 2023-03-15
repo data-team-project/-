@@ -70,28 +70,22 @@
     <header><img class="header_image" src="https://camp-road.co.kr/web/upload/dor_main_img/top_banner_01.jpg" onclick="location.href='index.html'"/></header>
     <!-- This is a navbar section -->
     <div id="navbar">
-        <!-- This is a dropdown menu -->
-        <div class="dropdown">
-            <!-- This is a button to open the dropdown menu -->
-            <button class="dropbtn" onclick="dropdownFunction()">캠핑 패키지
-                <!-- This is a caret icon to indicate the dropdown menu -->
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <!-- This is the content of the dropdown menu -->
-            <div class="dropdown-content" id="myDropdown">
-                <!-- These are the links inside the dropdown menu -->
-                <a class="dropdownDetail" href="#">2인용 캠핑 패키지</a>
-                <a class="dropdownDetail" href="#">3인용 캠핑 패키지</a>
-                <a class="dropdownDetail" href="#">4인용 캠핑 패키지</a>
-            </div>
-        </div> 
-        <!-- These are the links in the navbar -->
-        <a href="#home">텐트</a>
+		<div class="dropdown">
+			<a class="dropbtn" href="javascript:void(0)">캠핑 패키지<i class="fa fa-caret-down"></i></a>
+			<div class="dropdown-content">
+				<a href="#">2인용 캠핑 패키지</a>
+                <a href="#">3인용 캠핑 패키지</a>
+                <a href="#">4인용 캠핑 패키지</a>
+			</div>
+		</div>
+		<a href="#home">텐트</a>
         <a href="#home">타프</a>
         <a href="#home">원터치텐트</a>
         <a href="#home">매트/침낭</a>
         <a href="#home">코펠/버너/BBQ</a>
-    </div>
+	</div>
+    
+
     <!-- The social media icon bar -->
     <div class="icon-bar">
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -100,6 +94,7 @@
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
         <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
     </div>
+    <!-- main contents -->
     <div class="top_grid">
         <div class="main_grid">
             <!-- This is Slideshow Gallery -->
@@ -108,34 +103,28 @@
                 <!-- Full-width images with number text -->
                 <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img src="https://images.unsplash.com/photo-1624923686627-514dd5e57bae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                    <img src="capture1.PNG" style="width:100%">
                 </div>
             
                 <div class="mySlides">
                 <div class="numbertext">2 / 6</div>
-                    <img src="https://images.unsplash.com/photo-1571687949921-1306bfb24b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                    <img src="capture2.PNG" style="width:100%">
                 </div>
             
                 <div class="mySlides">
                     <div class="numbertext">3 / 6</div>
-                    <img src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                    <img src="capture3.PNG" style="width:100%">
                 </div>
             
                 <div class="mySlides">
                     <div class="numbertext">4 / 6</div>
-                    <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                    <img src="capture4.PNG" style="width:100%">
                 </div>
             
                 <div class="mySlides">
                     <div class="numbertext">5 / 6</div>
-                    <img src="https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
+                    <img src="capture5.PNG" style="width:100%">
                 </div>
-            
-                <div class="mySlides">
-                    <div class="numbertext">6 / 6</div>
-                    <img src="https://images.unsplash.com/photo-1624254495476-db6cc8b77e98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%">
-                </div>
-            
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -147,24 +136,21 @@
             
                 <!-- Thumbnail images -->
                 <div class="row">
-                <div class="column">
-                    <img class="demo cursor" src="https://images.unsplash.com/photo-1624923686627-514dd5e57bae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="https://images.unsplash.com/photo-1571687949921-1306bfb24b72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-                </div>
-                <div class="column">
-                    <img class="demo cursor" src="https://images.unsplash.com/photo-1624254495476-db6cc8b77e98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-                </div>
+                    <div class="column">
+                        <img class="demo cursor" src="capture1.PNG" style="width:100%" onclick="currentSlide(1)" alt="2인용 텐트 세트 A">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="capture2.PNG" style="width:100%" onclick="currentSlide(2)" alt="2인용 텐트 세트 A">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="capture3.PNG" style="width:100%" onclick="currentSlide(3)" alt="2인용 텐트 세트 A">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="capture4.PNG" style="width:100%" onclick="currentSlide(4)" alt="2인용 텐트 세트 A">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="capture5.PNG" style="width:100%" onclick="currentSlide(5)" alt="2인용 텐트 세트 A">
+                    </div>
                 </div>
             </div>
             <div class="detailed_product_description">
@@ -291,7 +277,7 @@
     <!-- This is a contents tab section -->
     <div class="contentstab">
         <span class="contentstab-content" onclick="ajax('product_discription_1', 'result3')">제품 상세설명</span>
-        <span class="contentstab-content" onclick="scrollToBottom()">제품 리뷰</span>
+        <span class="contentstab-content" onclick="scrollToTag('comments_head')">제품 리뷰</span>
         <span class="contentstab-content" onclick="ajax('attention', 'result3')">주의사항</span>
         <!-- 제품 상세설명, 제품 리뷰, 주의사항 -->
     </div>
@@ -301,7 +287,7 @@
         </div>
     </div> 
     <!-- 제품 리뷰 html -->
-    <div class="comments">
+    <div class="comments" id="comments_head">
         <p id="comments_title">제품 리뷰를 남겨주세요! 매주 추첨을 통해 텐트 이용권을 드려요!</p>
         <p>
             <div id="disqus_thread"></div>
@@ -433,6 +419,13 @@
             window.scrollTo(0, document.body.scrollHeight);
         }
     </script>
+    <!-- scroll to tag -->
+    <script>
+    function scrollToTag(tagID) {
+        var element = document.getElementById(tagID); // Replace "tag-id" with the ID of the element you want to scroll to
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
+    </script>
     <!--click dropdown 기능-->
     <script>
         /* When the user clicks on the button, 
@@ -444,9 +437,9 @@
         // Close the dropdown if the user clicks outside of it
         window.onclick = function(e) {
           if (!e.target.matches('.dropbtn')) {
-          var myDropdown = document.getElementById("myDropdown");
+            var myDropdown = document.getElementById("myDropdown");
             if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
+            myDropdown.classList.remove('show');
             }
           }
         }
