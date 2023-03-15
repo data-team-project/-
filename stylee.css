@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 
 * {
     font-family: 'Nanum Gothic', sans-serif;
@@ -99,6 +97,7 @@ nav {
     background: transparent;
     border: 1px solid cornflowerblue;
 }
+
 
 /* 하단 영역 */
 .footer {
@@ -246,14 +245,6 @@ nav {
 }
 .main h3 {
     padding-bottom: 5%;
-}
-
-/* 하단 이미지 */
-.underbar {
-    display: contents;
-}
-.underbar img {
-    display: block;
 }
 
 /* 오버레이 */
