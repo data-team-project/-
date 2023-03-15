@@ -132,10 +132,11 @@ nav {
     font-family: 'Nanum Gothic', sans-serif;
 }
 .slideshow-container img {
+    height: 100vh;
     vertical-align: middle;
 }
 .slideshow-container {
-    max-width: 1000px;
+    height: 100%;
     position: relative;
     margin: auto;
 }
@@ -150,14 +151,6 @@ nav {
     bottom: 1px;
     width: 100%;
     text-align: center;
-    background-color: rgba(0,0,0,0.4);
-}
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
     background-color: rgba(0,0,0,0.4);
 }
 .dot, .dot2 {
@@ -184,13 +177,18 @@ nav {
     margin: auto;
 }
 
+
 /* 서브 영역 */
 .sub {
     padding: 5%;
     text-align: center;
+    line-height: 1.5;
 }
 .sub h3 {
+    font-style: italic;
+    font-size: 20pt;
     padding-bottom: 5%;
+    line-height: 1.5;
 }
 
 /* Next & previous buttons */
@@ -225,7 +223,10 @@ nav {
     padding: 5%;
 }
 .reviews h3 {
+    font-style: italic;
     padding-bottom: 5%;
+    font-size: 20pt;
+    line-height: 1.5;
 }
 .reviews h4 {
     padding-bottom: 5%;
@@ -242,11 +243,21 @@ nav {
 
 /* 메인 영역 */
 .main {
+    height: 100vh;
     padding: 5%;
     text-align: center;
+    line-height: 2.5;
 }
 .main h3 {
+    font-style: italic;
+    font-size: 20pt;
     padding-bottom: 5%;
+    line-height: 1.5;
+}
+.main ul {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-size: 18pt;
 }
 
 /* 오버레이 */
@@ -303,7 +314,13 @@ nav {
     width : 50%;
 }
 .contact_box1 h3 {
+    font-style: italic;
     padding-bottom: 10%;
+    line-height: 1.5;
+    font-size: 20pt;
+}
+.contact_box1 p {
+    line-height: 1.5;
 }
 .contact_box2 input[type=text], select, textarea {
     width: 100%;
@@ -387,6 +404,67 @@ input[type=submit]:hover {
     font-size: 13px;
 }
 
+/* 스크롤다운버튼 */
+.arrow-down{
+    width:60px;
+    height:40px;
+    margin:0 0 0 -30px;
+    position:absolute;
+    left:51%;
+    bottom:0px;
+    -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+}
+.arrow-down:hover{
+   -webkit-animation-play-state: paused;
+}
+.left{
+    position:absolute;
+    height:10px;
+    width:40px;
+    background:rgba(255, 255, 255, 0.732);
+    -webkit-transform:rotate(240deg);
+    top:10px;
+    left:10px;
+    -webkit-border-radius:4px;
+    -webkit-transform-origin:5px 50%;
+    -webkit-animation: leftArrow 0.5s 1s infinite ease-out alternate;
+}
+.right{
+    position:absolute;
+    height:10px;
+    width:40px;
+    background:rgba(255, 255, 255, 0.732);
+    -webkit-transform:rotate(-60deg);
+    top:10px;
+    left:10px;
+    -webkit-border-radius:4px;
+    -webkit-transform-origin:5px 50%;
+    -webkit-animation: rightArrow 0.5s 1s infinite ease-out alternate;
+}
+
+@-webkit-keyframes arrow{
+  0% {
+    bottom:0px;
+  }
+  100%{
+    bottom:40px;
+  }
+}
+@-webkit-keyframes leftArrow{
+  0% {
+  }
+  100%{
+    -webkit-transform:rotate(225deg);
+  }
+}
+@-webkit-keyframes rightArrow{
+  0% {
+  }
+  100%{
+    -webkit-transform:rotate(-45deg);
+  }
+}
+
 /* fade */
 @keyframes fade {
     from {opacity: .4} 
@@ -398,6 +476,18 @@ input[type=submit]:hover {
     /* 슬라이더영역 */
     .text {
         font-size: 11px
+    }
+
+    /* 메인영역 */
+    .main {
+        line-height: 1.7;
+    }
+    .main p {
+        font-size: 11pt;
+    }
+    .main li {
+        font-size: 11pt;
+        line-height: 2.2;
     }
 
     /* 네비게이션바 영역 */
@@ -458,6 +548,13 @@ input[type=submit]:hover {
         display: block;
         min-width: max-content;
     }
+    header {
+        width: 100%;
+        height: 100vh;
+        background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+                url('image/m_camping.PNG');
+        background-size: cover;
+    }
 
     /* 리뷰영역 */
     .reviews p, ul {
@@ -469,9 +566,18 @@ input[type=submit]:hover {
         display: flex;
         flex-direction: column;
     }
-
     .banner1, .banner2, .banner3 {
         width: 100%;
         text-align: center;
+    }
+
+    /* 서브 영역 */
+    .sub p {
+        font-size: 10pt;
+    }
+
+    /* 스크롤다운버튼 */
+    .arrow-down {
+        left: 53%;
     }
 }
