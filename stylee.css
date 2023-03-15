@@ -343,6 +343,23 @@ input[type=submit]:hover {
     margin-top: 6px;
 }
 
+/* 배너 스타일 */
+.banner {
+    display:flex;
+    width:100%;
+    margin: 0 auto;
+    font-size:0;
+}
+
+.banner1, .banner2, .banner3 {
+    flex:1;
+}
+
+.banner1 img, .banner2 img, .banner3 img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Clear floats after the columns */
 .row::after {
     content: "";
@@ -443,5 +460,16 @@ input[type=submit]:hover {
     /* 리뷰영역 */
     .reviews p, ul {
         font-size: 10pt;
+    }
+
+    /* 하단배너 영역 */
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner1, .banner2, .banner3 {
+        width: 100%;
+        text-align: center;
     }
 }
