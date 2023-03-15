@@ -248,14 +248,6 @@ nav {
     padding-bottom: 5%;
 }
 
-/* 하단 이미지 */
-.underbar {
-    display: contents;
-}
-.underbar img {
-    display: block;
-}
-
 /* 오버레이 */
 .overlay {
     height: 100%;
