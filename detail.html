@@ -69,11 +69,11 @@
 <body>
     <header><img class="header_image" src="https://camp-road.co.kr/web/upload/dor_main_img/top_banner_01.jpg" onclick="location.href='index.html'"/></header>
     <!-- This is a navbar section -->
-    <div id="navbar">
-        <!-- This is a dropdown menu -->
+
+    <div id="navbar"><!--Sticky class will be added at here-->
         <div class="dropdown">
             <!-- This is a button to open the dropdown menu -->
-            <button class="dropbtn" onclick="dropdownFunction()">캠핑 패키지
+            <button class="dropbtn" onclick="dropdownFunction()" href="javacript:void(0)">캠핑 패키지
                 <!-- This is a caret icon to indicate the dropdown menu -->
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -85,13 +85,13 @@
                 <a class="dropdownDetail" href="#">4인용 캠핑 패키지</a>
             </div>
         </div> 
-        <!-- These are the links in the navbar -->
         <a href="#home">텐트</a>
         <a href="#home">타프</a>
         <a href="#home">원터치텐트</a>
         <a href="#home">매트/침낭</a>
         <a href="#home">코펠/버너/BBQ</a>
     </div>
+
     <!-- The social media icon bar -->
     <div class="icon-bar">
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -100,6 +100,7 @@
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
         <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
     </div>
+    <!-- main contents -->
     <div class="top_grid">
         <div class="main_grid">
             <!-- This is Slideshow Gallery -->
@@ -291,7 +292,7 @@
     <!-- This is a contents tab section -->
     <div class="contentstab">
         <span class="contentstab-content" onclick="ajax('product_discription_1', 'result3')">제품 상세설명</span>
-        <span class="contentstab-content" onclick="scrollToBottom()">제품 리뷰</span>
+        <span class="contentstab-content" onclick="scrollToTag('comments_head')">제품 리뷰</span>
         <span class="contentstab-content" onclick="ajax('attention', 'result3')">주의사항</span>
         <!-- 제품 상세설명, 제품 리뷰, 주의사항 -->
     </div>
@@ -301,7 +302,7 @@
         </div>
     </div> 
     <!-- 제품 리뷰 html -->
-    <div class="comments">
+    <div class="comments" id="comments_head">
         <p id="comments_title">제품 리뷰를 남겨주세요! 매주 추첨을 통해 텐트 이용권을 드려요!</p>
         <p>
             <div id="disqus_thread"></div>
@@ -433,6 +434,13 @@
             window.scrollTo(0, document.body.scrollHeight);
         }
     </script>
+    <!-- scroll to tag -->
+    <script>
+    function scrollToTag(tagID) {
+        var element = document.getElementById(tagID); // Replace "tag-id" with the ID of the element you want to scroll to
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
+    </script>
     <!--click dropdown 기능-->
     <script>
         /* When the user clicks on the button, 
@@ -444,9 +452,9 @@
         // Close the dropdown if the user clicks outside of it
         window.onclick = function(e) {
           if (!e.target.matches('.dropbtn')) {
-          var myDropdown = document.getElementById("myDropdown");
+            var myDropdown = document.getElementById("myDropdown");
             if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
+            myDropdown.classList.remove('show');
             }
           }
         }
