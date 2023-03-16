@@ -9,10 +9,9 @@ body {
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
-  position: relative;
-  max-width: 500px;
-  margin-top: 5%;
-  margin-left: 15%;
+  max-width: 600px;
+  margin-top: 80px;
+  margin-right: 60px;
 }
 
 /* Hide the images by default */
@@ -402,6 +401,12 @@ body {
 /* =============================End of Sticky Navbar=============================*/
 /* ==========================================================*/
 
+.main_grid {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: top; /* center vertically */
+    margin: 10px;
+}
 .show {
   display: block;
 }
@@ -434,11 +439,6 @@ input[type="button"] {
     /* add a lower z-index to the input tag to make it appear in front of the h1 tag */
     z-index: 1;
     font-size: 100%;
-}
-.main_grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 10px;
 }
 /* .top_grid {
     display: grid;
