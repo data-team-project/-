@@ -408,6 +408,9 @@ body {
     align-items: top; /* center vertically */
     margin: 10px;
 }
+#mySelect1 {
+  width: 250px;
+}
 .show {
   display: block;
 }
