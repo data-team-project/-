@@ -267,8 +267,9 @@
                 </div>
                 <!-- 구매하기, 장바구니담기 버튼 -->
                 <div class="decision_butn_mom">
-                    <button class="button"><span>바로 구매하기</span></button>
-                    <button class="button"><span>장바구니 담기</span></button>
+                    <!-- <input class="button" type="button" id="naverPayBtn" value="네이버페이 결제"> -->
+                    <button class="button" id="naverPayBtn"><span>네이버페이 결제</span></button>
+                    <!-- <button class="button"><span>장바구니 담기</span></button> -->
                 </div>
             </div>
         </div>
@@ -369,7 +370,7 @@
             </script>
             <!--End of Tawk.to Script-->
     </p>
-    <!--함수 정의-->
+    <!--====함수 정의====-->
     <!-- This is Slideshow -->
     <script>
         let slideIndex = 1;
@@ -454,10 +455,15 @@
     </script>
     <!--priceLoad 함수-->
     <script>
+        let naverPrice;
         function priceLoad(name) {
             fetch(name).then(function(response) {
                 response.text().then(function(text) {
-                    document.querySelector("#result").innerHTML = text;
+                    if (typeof text === 'string') {
+                        const formattedText = parseFloat(text).toLocaleString();
+                        document.querySelector("#result").innerHTML = '요금 : ' + formattedText + '원';
+                        naverPrice = text;
+                    }
                 });
             });
         }
@@ -467,7 +473,11 @@
         function priceLoad2(name) {
             fetch(name).then(function(response) {
                 response.text().then(function(text) {
-                    document.querySelector("#result2").innerHTML = text;
+                    if (typeof text === 'string') {
+                        const formattedText = parseFloat(text).toLocaleString();
+                        document.querySelector("#result2").innerHTML = '요금 : ' + formattedText + '원';
+                        naverPrice = text;
+                    }
                 });
             });
         }
@@ -506,6 +516,30 @@
             navbar.classList.remove("sticky");
         }
         }
+    </script>
+    <!-- 네이버 결제 api -->
+    <script src="https://nsp.pay.naver.com/sdk/js/naverpay.min.js"></script>
+    <script>
+        var oPay = Naver.Pay.create({
+            "mode" : "production", // development or production
+            "clientId": "u86j4ripEt8LRfPGzQ8" // clientId
+        });
+
+        //직접 만드신 네이버페이 결제버튼에 click Event를 할당하세요
+        var elNaverPayBtn = document.getElementById("naverPayBtn");
+
+        elNaverPayBtn.addEventListener("click", function() {
+            oPay.open({
+            "merchantUserKey": "고객1",
+            "merchantPayKey": "100번",
+            "productName": "2인용 텐트 세트 A",
+            "totalPayAmount": naverPrice,
+            "taxScopeAmount": naverPrice,
+            "taxExScopeAmount": "0",
+            "returnUrl": "사용자 결제 완료 후 결제 결과를 받을 URL"
+            });
+        });
+
     </script>
 </body>
 <!--==============================================================-->

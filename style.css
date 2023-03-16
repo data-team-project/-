@@ -149,13 +149,13 @@ body {
 /* ========================= Start of purchase button ======================== */
 .button {
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: rgb(33, 221, 33);
   border: none;
   color: #FFFFFF;
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
+  width: 220px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
