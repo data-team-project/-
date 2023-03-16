@@ -257,7 +257,7 @@ body {
 }
 /* ========================= End of footer ======================== */
 /* ========================= ======================== */
-/* =========================  ======================== */
+/* ========================= Start of contents tab ======================== */
 .decision_butn_mom {
   margin: 1%;
   margin-top: 4%;
@@ -291,7 +291,9 @@ body {
 }
 .contentstab_under_content {
   margin: 10%;
-  text-align: center;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 .comments {
   margin-left: 3%;
