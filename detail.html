@@ -529,6 +529,10 @@
         var elNaverPayBtn = document.getElementById("naverPayBtn");
 
         elNaverPayBtn.addEventListener("click", function() {
+            if (naverPrice == 0 || naverPrice == undefined)  {
+                alert('대여기간을 선택하시지 않으셨습니다.\n대여기간을 다시 선택하신후 결제 해주세요')
+            }
+            else {
             oPay.open({
             "merchantUserKey": "고객1",
             "merchantPayKey": "100번",
@@ -538,6 +542,7 @@
             "taxExScopeAmount": "0",
             "returnUrl": "사용자 결제 완료 후 결제 결과를 받을 URL"
             });
+            }
         });
 
     </script>
